@@ -66,4 +66,42 @@ h1{
   opacity: 50%;
   transition: all 0.5s;
 }
+.about-us-section {
+  background-color: #f9f9f9;
+  padding: 50px 0px 35px 0px;
+  border-radius: 8px;
+ }
+ .about-us-image {
+  border-radius: 90px;
+  overflow: hidden;
+ }
+ .follow-us {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-top: 27px;
+ }
+ .follow-us::after {
+  content: '';
+  display: inline-block;
+  width: 38px;
+  height: 1px;
+  background-color: #000;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+ }
+ .socials{
+  display: flex;
+ }
+ .insta-tiktok{
+  margin-top: 27px;
+  margin-left:8px ;
+ }
+ .insta-tiktok :hover {
+  color:#b0d42d;
+  cursor: pointer;
+ }
+ 
+ 
+ 
+ 
 
