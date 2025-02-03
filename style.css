@@ -167,6 +167,19 @@ h1{
   background-color: #198754;
   border-radius:30% ;
  }
+ .contact-socials{
+  color:#198754;
+ }
+ .contact-socials :hover{
+  color: #5e7760;
+ }
+ .btn-primary{
+  background-color: #198754;
+  border: none;
+ }
+ .btn-primary :hover{
+  background-color:#5e7760 ;
+ }
  
  
  
