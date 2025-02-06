@@ -17,7 +17,7 @@
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
   </head>
-  <body class="bg-light">
+  <body class="body">
   <header class="px-5 p-3 text-grey fixed-top">
     <div>
       <a class="navbar-brand" href="#">
@@ -44,8 +44,7 @@
     <div class="col-lg-6 ">
       <h2 class="mb-4">About Us</h2>
       <p>
-        Lorem ipsum d sed do eiusmod tempor ua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi uto eiulabore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequar adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex  incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quisr adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer Ut enim ad minim veniam, quistUt enim ad minim veniamUt enim ad minim veniamUt enim ad minim veniamUt enim ad minim veniamUt enim ad minim veniam.
-      </p>
+        Lorem ipsum d sed do eiusmod tempor ua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi uto eiulabore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequar adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex  incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quisr adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
       <div class="socials">
       <div class="follow-us">Follow Us</div>
       <div class="insta-tiktok">
@@ -195,40 +194,37 @@
        <a class="fs-2 contact-socials" href=""><i class="bi bi-instagram m-2"></i></a>
        <a class="fs-2 contact-socials" href=""><i class="bi bi-tiktok m-2"></i></a>
        <a class="fs-2 contact-socials" href=""><i class="bi bi-youtube m-2"></i></a>
-       <form>
- 
-        <div class="mb-3">             
-          <input
-            type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            placeholder="Enter Email Address"
-          />
-        </div>
- 
-        <div class="mb-3">   
-          <input
-            type="text"
-            class="form-control"
-            id="name"
-            placeholder="Enter Name"
-          />
-        </div>
- 
-        <div class="mb-3">   
-          <input
-            type="text"
-            class="form-control"
-            id="subject"
-            placeholder="Enter Subject"
-          />
-        </div>
-        <div class="mb-3">
-            <textarea class="form-control" aria-label="with textarea" placeholder="Enter Message"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+       <form 
+       action="https://formspree.io/f/mgvozvev" 
+       method="POST" class="form">       
+       <!-- Email Field -->
+       <div class="mb-0 " >
+         <label for="email" class="form-label"></label>
+         <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
+       </div>
+     
+       <!-- Name Field -->
+       <div class="mb-0">
+        <label for="subject" class="form-label"></label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
+      </div>
+
+      <div class="mb-0">
+        <label for="subject" class="form-label"></label>
+        <input type="text" name="subject" id="subject" class="form-control" placeholder="Enter subject" required>
+      </div>
+       <!-- Message Field -->
+       <div class="mb-3">
+         <label for="message" class="form-label"></label>
+         <textarea name="message" id="message" class="form-control" rows="4" placeholder="Enter your message" required></textarea>
+       </div>
+     
+       <!-- Submit Button -->
+       <div class="text-center">
+         <button type="submit" class="btn btn-primary">Submit</button>
+       </div>
+     </form>
+     
       </div>
     </div>
   </div>
@@ -247,3 +243,6 @@
 
 </body>
 </html>
+
+
+
