@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
- * {
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/** Header*/
- .banner-wrap {
+/** Header */
+.banner-wrap {
   background-image: url(./assets/banner.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,6 +16,7 @@
   position: relative;
   z-index: 1;
 }
+
 .overlay {
   z-index: -1;
   height: 100%;
@@ -24,33 +26,37 @@
   position: absolute;
   top: 0;
 }
-h1{
-  color:#fff;
+
+h1 {
+  color: #fff;
   letter-spacing: 8px;
   font-family: "Pochaevsk", serif;
-  font-weight:lighter;
-  font-style:normal;
-  
-}
-.poma {
-  padding-top: 40px;
-}
- .art {
-  margin-right: 97px;
+  font-weight: lighter;
+  font-style: normal;
+  text-align: center;
 }
 
 .navbar-brand img {
   height: 80px;
   border-radius: 50px;
 }
+
+.nav-masthead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .nav-masthead .nav-link {
-  color: rgba(255, 255, 255, .5);
-  border-bottom: .25rem solid transparent;
+  color: rgba(255, 255, 255, 0.5);
+  border-bottom: 0.25rem solid transparent;
+  padding: 10px;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -61,6 +67,7 @@ h1{
   color: #fff;
   border-bottom-color: #fff;
 }
+
 .scrolling {
   background: rgb(83, 81, 81);
   opacity: 50%;
@@ -251,5 +258,58 @@ h1{
   }
 }
  
- 
+/* Align logo and menu icon in one row */
+header .d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensures logo on left, icon on right */
+}
 
+/* Default: Hide menu icon */
+.menu-icon {
+  font-size: 40px;
+  cursor: pointer;
+  color: white;
+  display: none;
+}
+
+/* Show menu icon only on tablet & smaller screens */
+@media screen and (max-width: 992px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-masthead {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: black;
+    text-align: center;
+  }
+
+  .nav-masthead.active {
+    display: flex;
+  }
+}
+@media screen and (max-width: 576px) {
+  .banner-wrap {
+    background-image: url(./assets/WhatsApp\ Image\ 2025-02-06\ at\ 22.20.27.jpeg);
+  }
+}
+/* Ensure nav is hidden on small screens and appears when toggled */
+@media screen and (max-width: 991px) {
+  .nav-masthead {
+    flex-direction: column;
+    align-items: center;
+    background: black;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
