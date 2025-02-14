@@ -81,12 +81,16 @@ h1 {
  }
  .about-us-image {
   border-radius: 90px;
-  overflow: hidden;
+  max-width: 100%;  /* Ensures the image is responsive */
+  width: 85%;  /* Adjusts image width */
+  height: auto;
+  display: block;
+  margin: 0 auto;
  }
  .follow-us {
   font-size: 0.9rem;
   text-transform: uppercase;
-  margin-top: 27px;
+  margin-top: 8px;
  }
  .follow-us::after {
   content: '';
@@ -101,7 +105,7 @@ h1 {
   display: flex;
  }
  .insta-tiktok{
-  margin-top: 27px;
+  margin-top: 7px;
   margin-left:8px ;
  }
  .insta-tiktok :hover {
@@ -121,7 +125,7 @@ h1 {
  .content-box {
   background-color: #3D513F; 
   color: #0C0C0E;
-  padding: 20px;
+  padding: 30px;
   font-weight: normal;
   border-radius: 80px;
   text-align: justify;
@@ -211,8 +215,6 @@ h1 {
 .container {
   width: 90%;
   padding-top: 20px;
-  
-  
 }
 /* Footer link pages  */
 .header {
@@ -258,11 +260,49 @@ h1 {
   }
 }
  
-/* Align logo and menu icon in one row */
+/* about us section */
+@media (min-width: 992px) { /* Applies only on large screens */
+  .about-us-image img {
+    border-radius: 65px;
+  }
+}
+.insta-tiktok i {
+  font-size: 1.2rem;  
+  padding-bottom: 5px;
+}
+@media (max-width: 992px) {  
+  .about-us-image {
+    display: none;
+  }
+}
+@media (min-width: 992px) { 
+  .about-us-section p {
+    padding-right: 30px;
+    margin: 0 auto; 
+  }
+}
+/* our mission section on smaller screens */
+@media (max-width: 991px) { 
+  .content-box {
+    padding: 30px 5px 30px 5px; 
+    border-radius: 60px; 
+    height: 85%;
+  }
+}
+/* our mission section on tablet screens */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .content-box {
+    max-height: 350px; /* Adjust height as needed */
+    padding: 20px;
+    overflow-y: auto; /* Adds scroll if content overflows */
+  }
+}
+
+/* Aligns logo and menu icon in one row */
 header .d-flex {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Ensures logo on left, icon on right */
+  justify-content: space-between; 
 }
 
 /* Default: Hide menu icon */
@@ -273,7 +313,7 @@ header .d-flex {
   display: none;
 }
 
-/* Show menu icon only on tablet & smaller screens */
+/* Shows menu icon only on tablet & smaller screens */
 @media screen and (max-width: 992px) {
   .menu-icon {
     display: block;
@@ -299,7 +339,7 @@ header .d-flex {
     background-image: url(./assets/WhatsApp\ Image\ 2025-02-06\ at\ 22.20.27.jpeg);
   }
 }
-/* Ensure nav is hidden on small screens and appears when toggled */
+/* Ensures nav is hidden on small screens and appears when toggled */
 @media screen and (max-width: 991px) {
   .nav-masthead {
     flex-direction: column;
