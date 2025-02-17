@@ -12,17 +12,17 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
+  min-height: 90vh;
   position: relative;
   z-index: 1;
 }
 
 .overlay {
-  z-index: -1;
+  z-index: 0;
   height: 100%;
   width: 100%;
   background: black;
-  opacity: 25%;
+  opacity: 15%;
   position: absolute;
   top: 0;
 }
@@ -70,8 +70,9 @@ h1 {
 
 .scrolling {
   background: rgb(83, 81, 81);
-  opacity: 50%;
+  opacity: 30%;
   transition: all 0.5s;
+  height: 16%;
 }
 /* About us section */
 .about-us-section {
@@ -259,7 +260,13 @@ h1 {
       padding: 10px;
   }
 }
- 
+ /* Banner page on tablets */
+@media (max-width: 991px) {
+  .banner-wrap {
+    background-image: url(./assets/banner-md.jpeg); /* Use a different image for tablets */
+    height: 80vh; /* Slightly smaller height on tablets */
+  }
+}
 /* about us section */
 @media (min-width: 992px) { /* Applies only on large screens */
   .about-us-image img {
@@ -321,7 +328,7 @@ header .d-flex {
 
   .nav-masthead {
     display: none;
-    flex-direction: column;
+    flex-direction:column;
     position: absolute;
     top: 60px;
     right: 0;
@@ -336,15 +343,17 @@ header .d-flex {
 }
 @media screen and (max-width: 576px) {
   .banner-wrap {
-    background-image: url(./assets/WhatsApp\ Image\ 2025-02-06\ at\ 22.20.27.jpeg);
+    background-image: url(./assets/banner-sml.jpeg);
+    height: 60vh; /* Further reduce height for mobile */
   }
 }
 /* Ensures nav is hidden on small screens and appears when toggled */
 @media screen and (max-width: 991px) {
   .nav-masthead {
     flex-direction: column;
-    align-items: center;
-    background: black;
+    align-items:center;
+    background: rgb(83, 81, 81);
+    opacity: 70%;
     width: 100%;
     position: absolute;
     top: 60px;
@@ -353,3 +362,88 @@ header .d-flex {
     padding: 10px 0;
   }
 }
+
+/* Reduce padding and center on small screens */
+@media (max-width: 768px) {
+  .meet-the-team {
+    padding-left: 10px; /* Reduce left padding */
+    padding-right: 10px;
+  }
+}
+
+/* Reduce font size for slogan on smaller screens */
+.slogan {
+  font-size: 13px;
+}
+
+/* Adjust the underline width and spacing on smaller screens */
+@media (max-width: 768px) {
+  .slogan::before,
+  .slogan::after {
+    width: 40px; /* Make lines shorter */
+    margin-right: 0.3rem;
+    margin-left: 0.3rem;
+  }
+}
+
+/* Adjust the team image size for smaller screens */
+.team-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ddd;
+}
+
+/* Make images smaller on very small screens */
+@media (max-width: 390px) {
+  .team-img {
+    width: 80px; /* Reduce image size */
+    height: 80px;
+  }
+}
+
+/* Adjust role link size on small screens */
+.role-link {
+  color: #0C0C0C;
+  font-size: 16px;
+  text-decoration: none;
+  font-family: "Poppins", serif;
+}
+
+@media (max-width: 768px) {
+  .role-link {
+    font-size: 14px; /* Reduce font size */
+  }
+}
+
+/* Reduce the button size for small screens */
+.btn-next {
+  background-color: #198754;
+  border-radius: 30%;
+  padding: 8px 16px; /* Adjust padding */
+}
+
+@media (max-width: 390px) {
+  .btn-next {
+    padding: 6px 12px; /* Make button smaller */
+  }
+}
+
+/* Adjust margins for slides */
+.slide-2 {
+  margin-bottom: 80px;
+}
+
+.slide-1 {
+  padding-top: 1px;
+  width: 80%;
+}
+
+/* Reduce margin for better spacing */
+@media (max-width: 390px) {
+  .slide-2 {
+    margin-bottom: 40px; /* Reduce spacing */
+  }
+}
+
